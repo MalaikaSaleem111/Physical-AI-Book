@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:en.wikipedia.org)",
+      "Bash(mkdir -p docs/chapter-01-introduction-to-physical-ai)",
+      "Bash(mkdir -p docs/chapter-02-ros2-fundamentals)",
+      "Bash(mkdir -p docs/chapter-03-ros2-fundamentals-part2)",
+      "Bash(mkdir -p docs/chapter-04-ros2-fundamentals-part3)",
+      "Bash(mkdir -p docs/chapter-05-digital-twin-simulation-part1)",
+      "Bash(mkdir -p docs/chapter-06-digital-twin-simulation-part2)",
+      "Bash(mkdir -p docs/chapter-07-nvidia-isaac-sim-perception)",
+      "Bash(mkdir -p docs/chapter-08-nvidia-isaac-sim-vslam-nav2)",
+      "Bash(mkdir -p docs/chapter-09-nvidia-isaac-sim-rl-basics)",
+      "Bash(mkdir -p docs/chapter-10-humanoid-kinematics)",
+      "Bash(mkdir -p docs/chapter-11-humanoid-locomotion-manipulation)",
+      "Bash(mkdir -p docs/chapter-12-vision-language-action)",
+      "Bash(mkdir -p docs/chapter-13-capstone-concept)",
+      "Bash(mkdir -p docs/chapter-12-hardware-overview)",
+      "Bash(mkdir -p docs/chapter-13-robot-lab-options)",
+      "Bash(mkdir -p docs/chapter-14-cloud-compute-options)",
+      "Bash(mkdir -p docs/chapter-15-weekly-breakdown)",
+      "Bash(mkdir -p docs/chapter-16-learning-outcomes)",
+      "Bash(mkdir -p docs/appendices/architecture-diagrams)",
+      "Bash(mkdir -p docs/appendices/references)",
+      "Bash(mkdir -p docs/appendices/diagrams)",
+      "Bash(powershell -Command \"Rename-Item -Path ''docs\\chapter-13-robot-lab-options'' -NewName ''chapter-16-robot-lab-options''\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
