@@ -13,15 +13,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://MalaikaSaleem111.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub Pages deployment, it is often '/<organization-name>/<repo-name>/'
-  baseUrl: '/',
+  baseUrl: '/Physical-AI-Book/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-organization', // Usually your GitHub org/user name.
-  projectName: 'your-book', // Usually your repo name.
+  organizationName: 'MalaikaSaleem111', // Usually your GitHub org/user name.
+  projectName: 'Physical-AI-Book', // Usually your repo name.
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
