@@ -15,7 +15,7 @@ const config = {
   // Set the production url of your site here
   url: 'https://MalaikaSaleem111.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub Pages deployment, use '/<organization-name>/<repo-name>/'
+  // For GitHub Pages, use '/<organization-name>/<repo-name>/'
   baseUrl: '/Physical-AI-Book/',
 
   // GitHub pages deployment config.
