@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-chapter-17-cloud-compute-options/index" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Chapter 17: Cloud Compute Options (AWS g5, cost ranges) | Physical AI &amp; Humanoid Robotics</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://MalaikaSaleem111.github.io/Physical-AI-Book/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://MalaikaSaleem111.github.io/Physical-AI-Book/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://MalaikaSaleem111.github.io/Physical-AI-Book/docs/chapter-17-cloud-compute-options/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Chapter 17: Cloud Compute Options (AWS g5, cost ranges) | Physical AI &amp; Humanoid Robotics"><meta data-rh="true" name="description" content="Overview"><meta data-rh="true" property="og:description" content="Overview"><link data-rh="true" rel="icon" href="/Physical-AI-Book/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://MalaikaSaleem111.github.io/Physical-AI-Book/docs/chapter-17-cloud-compute-options/"><link data-rh="true" rel="alternate" href="https://MalaikaSaleem111.github.io/Physical-AI-Book/docs/chapter-17-cloud-compute-options/" hreflang="en"><link data-rh="true" rel="alternate" href="https://MalaikaSaleem111.github.io/Physical-AI-Book/docs/chapter-17-cloud-compute-options/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Chapter 17: Cloud Compute Options (AWS g5, cost ranges)","item":"https://MalaikaSaleem111.github.io/Physical-AI-Book/docs/chapter-17-cloud-compute-options/"}]}</script><link rel="stylesheet" href="/Physical-AI-Book/assets/css/styles.061db6cc.css">
+<script src="/Physical-AI-Book/assets/js/runtime~main.953d489d.js" defer="defer"></script>
+<script src="/Physical-AI-Book/assets/js/main.7376e79c.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/Physical-AI-Book/docs/intro"><div class="navbar__logo"><img src="/Physical-AI-Book/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/Physical-AI-Book/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/Physical-AI-Book/docs/intro">Book</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/MalaikaSaleem111/Physical-AI-Book.git" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/Physical-AI-Book/docs/intro"><span title="Introduction" class="linkLabel_WmDU">Introduction</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/Physical-AI-Book/docs/chapter-01-introduction-to-physical-ai/"><span title="Part I: Foundations" class="categoryLinkLabel_W154">Part I: Foundations</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-01-introduction-to-physical-ai/"><span title="Chapter 1: Introduction to Physical AI &amp; Embodied Intelligence" class="linkLabel_WmDU">Chapter 1: Introduction to Physical AI &amp; Embodied Intelligence</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-02-ros2-fundamentals/"><span title="Chapter 2: ROS 2 Fundamentals - Part 1" class="linkLabel_WmDU">Chapter 2: ROS 2 Fundamentals - Part 1</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-03-ros2-fundamentals-part2/"><span title="Chapter 3: ROS 2 Fundamentals - Part 2" class="linkLabel_WmDU">Chapter 3: ROS 2 Fundamentals - Part 2</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-04-ros2-fundamentals-part3/"><span title="Chapter 4: ROS 2 Fundamentals - Part 3 (URDF)" class="linkLabel_WmDU">Chapter 4: ROS 2 Fundamentals - Part 3 (URDF)</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/Physical-AI-Book/docs/chapter-05-digital-twin-simulation-part1/"><span title="Part II: Digital Twin &amp; Simulation" class="categoryLinkLabel_W154">Part II: Digital Twin &amp; Simulation</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-05-digital-twin-simulation-part1/"><span title="Chapter 5: Digital Twin Simulation Theory - Part 1" class="linkLabel_WmDU">Chapter 5: Digital Twin Simulation Theory - Part 1</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-06-digital-twin-simulation-part2/"><span title="Chapter 6: Digital Twin Simulation Theory - Part 2" class="linkLabel_WmDU">Chapter 6: Digital Twin Simulation Theory - Part 2</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/Physical-AI-Book/docs/chapter-07-nvidia-isaac-sim-perception/"><span title="Part III: NVIDIA Isaac Platform" class="categoryLinkLabel_W154">Part III: NVIDIA Isaac Platform</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-07-nvidia-isaac-sim-perception/"><span title="Chapter 7: NVIDIA Isaac Sim Theory - Perception" class="linkLabel_WmDU">Chapter 7: NVIDIA Isaac Sim Theory - Perception</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-08-nvidia-isaac-sim-vslam-nav2/"><span title="Chapter 8: NVIDIA Isaac Sim Theory - VSLAM &amp; Nav2" class="linkLabel_WmDU">Chapter 8: NVIDIA Isaac Sim Theory - VSLAM &amp; Nav2</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-09-nvidia-isaac-sim-rl-basics/"><span title="Chapter 9: NVIDIA Isaac Sim Theory - RL Basics" class="linkLabel_WmDU">Chapter 9: NVIDIA Isaac Sim Theory - RL Basics</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/Physical-AI-Book/docs/chapter-10-humanoid-kinematics/"><span title="Part IV: Humanoid Robotics" class="categoryLinkLabel_W154">Part IV: Humanoid Robotics</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-10-humanoid-kinematics/"><span title="Chapter 10: Humanoid Robotics - Kinematics" class="linkLabel_WmDU">Chapter 10: Humanoid Robotics - Kinematics</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-11-humanoid-locomotion-manipulation/"><span title="Chapter 11: Humanoid Robotics - Locomotion &amp; Manipulation" class="linkLabel_WmDU">Chapter 11: Humanoid Robotics - Locomotion &amp; Manipulation</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-12-vision-language-action/"><span title="Chapter 12: Vision-Language-Action Pipeline (Conceptual)" class="linkLabel_WmDU">Chapter 12: Vision-Language-Action Pipeline (Conceptual)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-13-capstone-concept/"><span title="Chapter 13: Capstone Concept - Autonomous Humanoid" class="linkLabel_WmDU">Chapter 13: Capstone Concept - Autonomous Humanoid</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-14-humanoid-control-systems/"><span title="Chapter 14: Humanoid Control System" class="linkLabel_WmDU">Chapter 14: Humanoid Control System</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/Physical-AI-Book/docs/chapter-15-hardware-overview/"><span title="Part V: Supporting Content" class="categoryLinkLabel_W154">Part V: Supporting Content</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-15-hardware-overview/"><span title="Chapter 15: Hardware Overview (Digital Twin Workstation, Edge Kit, Jetson)" class="linkLabel_WmDU">Chapter 15: Hardware Overview (Digital Twin Workstation, Edge Kit, Jetson)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-16-robot-lab-options/"><span title="Chapter 16: Robot Lab Options (Unitree Go2/G1/H1 comparison)" class="linkLabel_WmDU">Chapter 16: Robot Lab Options (Unitree Go2/G1/H1 comparison)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/Physical-AI-Book/docs/chapter-17-cloud-compute-options/"><span title="Chapter 17: Cloud Compute Options (AWS g5, cost ranges)" class="linkLabel_WmDU">Chapter 17: Cloud Compute Options (AWS g5, cost ranges)</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-2 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" tabindex="0" href="/Physical-AI-Book/docs/appendices/architecture-diagrams/"><span title="Appendices" class="categoryLinkLabel_W154">Appendices</span></a></div></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="true" href="/Physical-AI-Book/docs/chapter-18-weekly-breakdown/"><span title="Part VI: Weekly Learning Modules &amp; Outcomes" class="categoryLinkLabel_W154">Part VI: Weekly Learning Modules &amp; Outcomes</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-18-weekly-breakdown/"><span title="Chapter 18: Weekly Breakdown (Weeks 1–13)" class="linkLabel_WmDU">Chapter 18: Weekly Breakdown (Weeks 1–13)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/Physical-AI-Book/docs/chapter-19-learning-outcomes/"><span title="Chapter 19: Learning Outcomes &amp; Assessments" class="linkLabel_WmDU">Chapter 19: Learning Outcomes &amp; Assessments</span></a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/Physical-AI-Book/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Part V: Supporting Content</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Chapter 17: Cloud Compute Options (AWS g5, cost ranges)</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Chapter 17: Cloud Compute Options (AWS g5, cost ranges)</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="overview">Overview<a href="#overview" class="hash-link" aria-label="Direct link to Overview" title="Direct link to Overview" translate="no">​</a></h2>
+<p>Cloud computing has become essential for robotics research and development, providing scalable computational resources for simulation, training, and deployment of robotic systems. This chapter explores cloud computing options for robotics applications, with particular focus on GPU-accelerated computing suitable for AI and robotics workloads. The analysis emphasizes understanding cloud computing concepts rather than specific implementation details.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="cloud-computing-in-robotics">Cloud Computing in Robotics<a href="#cloud-computing-in-robotics" class="hash-link" aria-label="Direct link to Cloud Computing in Robotics" title="Direct link to Cloud Computing in Robotics" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="applications-in-robotics">Applications in Robotics<a href="#applications-in-robotics" class="hash-link" aria-label="Direct link to Applications in Robotics" title="Direct link to Applications in Robotics" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="simulation-and-training">Simulation and Training<a href="#simulation-and-training" class="hash-link" aria-label="Direct link to Simulation and Training" title="Direct link to Simulation and Training" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Physics Simulation</strong>: Running complex physics simulations</li>
+<li class=""><strong>Reinforcement Learning</strong>: Training AI agents in virtual environments</li>
+<li class=""><strong>Data Generation</strong>: Creating large datasets for training</li>
+<li class=""><strong>Multi-Agent Systems</strong>: Simulating multiple robots simultaneously</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-model-training">AI Model Training<a href="#ai-model-training" class="hash-link" aria-label="Direct link to AI Model Training" title="Direct link to AI Model Training" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Deep Learning</strong>: Training neural networks for perception and control</li>
+<li class=""><strong>Transfer Learning</strong>: Fine-tuning pre-trained models</li>
+<li class=""><strong>Hyperparameter Tuning</strong>: Optimizing model parameters</li>
+<li class=""><strong>Model Validation</strong>: Testing models under various conditions</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="real-time-processing">Real-time Processing<a href="#real-time-processing" class="hash-link" aria-label="Direct link to Real-time Processing" title="Direct link to Real-time Processing" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Perception</strong>: Real-time image and sensor processing</li>
+<li class=""><strong>Planning</strong>: Path planning and task scheduling</li>
+<li class=""><strong>Control</strong>: Real-time control algorithm execution</li>
+<li class=""><strong>Monitoring</strong>: Continuous system monitoring and analytics</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="benefits-of-cloud-computing">Benefits of Cloud Computing<a href="#benefits-of-cloud-computing" class="hash-link" aria-label="Direct link to Benefits of Cloud Computing" title="Direct link to Benefits of Cloud Computing" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="scalability">Scalability<a href="#scalability" class="hash-link" aria-label="Direct link to Scalability" title="Direct link to Scalability" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Elastic Resources</strong>: Scaling resources up or down as needed</li>
+<li class=""><strong>Parallel Processing</strong>: Utilizing multiple instances for faster computation</li>
+<li class=""><strong>Load Balancing</strong>: Distributing workloads across multiple resources</li>
+<li class=""><strong>Auto-scaling</strong>: Automatic adjustment based on demand</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="cost-effectiveness">Cost-Effectiveness<a href="#cost-effectiveness" class="hash-link" aria-label="Direct link to Cost-Effectiveness" title="Direct link to Cost-Effectiveness" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Pay-as-You-Use</strong>: Paying only for resources actually consumed</li>
+<li class=""><strong>No Hardware Investment</strong>: Eliminating upfront hardware costs</li>
+<li class=""><strong>Maintenance Reduction</strong>: No need for hardware maintenance</li>
+<li class=""><strong>Global Access</strong>: Accessing resources from anywhere</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="aws-cloud-computing-options">AWS Cloud Computing Options<a href="#aws-cloud-computing-options" class="hash-link" aria-label="Direct link to AWS Cloud Computing Options" title="Direct link to AWS Cloud Computing Options" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="gpu-instances-overview">GPU Instances Overview<a href="#gpu-instances-overview" class="hash-link" aria-label="Direct link to GPU Instances Overview" title="Direct link to GPU Instances Overview" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="g5-instance-family">G5 Instance Family<a href="#g5-instance-family" class="hash-link" aria-label="Direct link to G5 Instance Family" title="Direct link to G5 Instance Family" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>GPU Type</strong>: NVIDIA A10G GPUs</li>
+<li class=""><strong>Use Cases</strong>: Graphics-intensive applications, machine learning</li>
+<li class=""><strong>Memory</strong>: High GPU memory capacity</li>
+<li class=""><strong>Networking</strong>: Enhanced networking capabilities</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="other-gpu-options">Other GPU Options<a href="#other-gpu-options" class="hash-link" aria-label="Direct link to Other GPU Options" title="Direct link to Other GPU Options" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>P3 Instances</strong>: NVIDIA V100 GPUs for machine learning</li>
+<li class=""><strong>P4 Instances</strong>: NVIDIA A100 GPUs for advanced ML workloads</li>
+<li class=""><strong>G4 Instances</strong>: NVIDIA T4 GPUs for graphics and ML</li>
+<li class=""><strong>Inf1 Instances</strong>: AWS Inferentia chips for ML inference</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="instance-specifications">Instance Specifications<a href="#instance-specifications" class="hash-link" aria-label="Direct link to Instance Specifications" title="Direct link to Instance Specifications" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="g5-instance-types">G5 Instance Types<a href="#g5-instance-types" class="hash-link" aria-label="Direct link to G5 Instance Types" title="Direct link to G5 Instance Types" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>g5.xlarge</strong>: 1 GPU, 4 vCPUs, 16 GB memory</li>
+<li class=""><strong>g5.2xlarge</strong>: 1 GPU, 8 vCPUs, 32 GB memory</li>
+<li class=""><strong>g5.4xlarge</strong>: 1 GPU, 16 vCPUs, 64 GB memory</li>
+<li class=""><strong>g5.8xlarge</strong>: 1 GPU, 32 vCPUs, 128 GB memory</li>
+<li class=""><strong>g5.16xlarge</strong>: 1 GPU, 64 vCPUs, 256 GB memory</li>
+<li class=""><strong>g5.12xlarge</strong>: 4 GPUs, 48 vCPUs, 192 GB memory</li>
+<li class=""><strong>g5.24xlarge</strong>: 4 GPUs, 96 vCPUs, 384 GB memory</li>
+<li class=""><strong>g5.48xlarge</strong>: 8 GPUs, 192 vCPUs, 768 GB memory</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="technical-specifications">Technical Specifications<a href="#technical-specifications" class="hash-link" aria-label="Direct link to Technical Specifications" title="Direct link to Technical Specifications" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>GPU Memory</strong>: Varies by instance type (24GB per A10G)</li>
+<li class=""><strong>CPU Architecture</strong>: Intel Xeon or AMD EPYC processors</li>
+<li class=""><strong>Network Performance</strong>: Up to 100 Gbps networking</li>
+<li class=""><strong>Storage Options</strong>: NVMe SSDs for high-performance storage</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cost-analysis">Cost Analysis<a href="#cost-analysis" class="hash-link" aria-label="Direct link to Cost Analysis" title="Direct link to Cost Analysis" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="on-demand-pricing">On-Demand Pricing<a href="#on-demand-pricing" class="hash-link" aria-label="Direct link to On-Demand Pricing" title="Direct link to On-Demand Pricing" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>g5.xlarge</strong>: ~$0.75-1.00 per hour</li>
+<li class=""><strong>g5.2xlarge</strong>: ~$1.50-2.00 per hour</li>
+<li class=""><strong>g5.4xlarge</strong>: ~$3.00-4.00 per hour</li>
+<li class=""><strong>g5.8xlarge</strong>: ~$6.00-8.00 per hour</li>
+<li class=""><strong>g5.16xlarge</strong>: ~$12.00-16.00 per hour</li>
+<li class=""><strong>g5.12xlarge</strong>: ~$36.00-48.00 per hour</li>
+<li class=""><strong>g5.24xlarge</strong>: ~$72.00-96.00 per hour</li>
+<li class=""><strong>g5.48xlarge</strong>: ~$144.00-192.00 per hour</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="cost-optimization-strategies">Cost Optimization Strategies<a href="#cost-optimization-strategies" class="hash-link" aria-label="Direct link to Cost Optimization Strategies" title="Direct link to Cost Optimization Strategies" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Reserved Instances</strong>: Up to 70% discount for long-term commitments</li>
+<li class=""><strong>Spot Instances</strong>: Up to 70% discount for flexible workloads</li>
+<li class=""><strong>Savings Plans</strong>: Flexible discount options for steady usage</li>
+<li class=""><strong>Auto-scaling</strong>: Optimizing resource usage based on demand</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="alternative-cloud-providers">Alternative Cloud Providers<a href="#alternative-cloud-providers" class="hash-link" aria-label="Direct link to Alternative Cloud Providers" title="Direct link to Alternative Cloud Providers" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="google-cloud-platform-gcp">Google Cloud Platform (GCP)<a href="#google-cloud-platform-gcp" class="hash-link" aria-label="Direct link to Google Cloud Platform (GCP)" title="Direct link to Google Cloud Platform (GCP)" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="compute-options">Compute Options<a href="#compute-options" class="hash-link" aria-label="Direct link to Compute Options" title="Direct link to Compute Options" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>A2 Instances</strong>: NVIDIA A100 GPUs for AI workloads</li>
+<li class=""><strong>A3 Instances</strong>: NVIDIA H100 GPUs for advanced AI</li>
+<li class=""><strong>G2 Instances</strong>: NVIDIA L4 GPUs for graphics and vision</li>
+<li class=""><strong>N1/N2 Instances</strong>: General-purpose instances with GPU support</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="pricing-considerations">Pricing Considerations<a href="#pricing-considerations" class="hash-link" aria-label="Direct link to Pricing Considerations" title="Direct link to Pricing Considerations" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Sustained Use Discounts</strong>: Discounts for continuous usage</li>
+<li class=""><strong>Preemptible VMs</strong>: Up to 80% discount for fault-tolerant workloads</li>
+<li class=""><strong>Committed Use</strong>: Discounts for committed usage</li>
+<li class=""><strong>Custom Machine Types</strong>: Flexible resource configuration</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="microsoft-azure">Microsoft Azure<a href="#microsoft-azure" class="hash-link" aria-label="Direct link to Microsoft Azure" title="Direct link to Microsoft Azure" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="gpu-options">GPU Options<a href="#gpu-options" class="hash-link" aria-label="Direct link to GPU Options" title="Direct link to GPU Options" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>NC Series</strong>: NVIDIA Tesla K80, P100, V100 GPUs</li>
+<li class=""><strong>ND Series</strong>: NVIDIA Tesla P40, V100 GPUs</li>
+<li class=""><strong>NV Series</strong>: NVIDIA M60 GPUs for graphics applications</li>
+<li class=""><strong>NVIDIA A10</strong>: Latest generation GPU options</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="service-integration">Service Integration<a href="#service-integration" class="hash-link" aria-label="Direct link to Service Integration" title="Direct link to Service Integration" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Azure Machine Learning</strong>: Integrated ML platform</li>
+<li class=""><strong>Azure Container Instances</strong>: Containerized robotics applications</li>
+<li class=""><strong>Azure Kubernetes Service</strong>: Container orchestration</li>
+<li class=""><strong>Azure IoT Hub</strong>: IoT and robotics integration</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="other-cloud-options">Other Cloud Options<a href="#other-cloud-options" class="hash-link" aria-label="Direct link to Other Cloud Options" title="Direct link to Other Cloud Options" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="specialized-providers">Specialized Providers<a href="#specialized-providers" class="hash-link" aria-label="Direct link to Specialized Providers" title="Direct link to Specialized Providers" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Lambda Labs</strong>: GPU cloud computing focused on ML</li>
+<li class=""><strong>Paperspace</strong>: GPU cloud for ML and simulation</li>
+<li class=""><strong>Vast.ai</strong>: Marketplace for GPU compute resources</li>
+<li class=""><strong>RunPod</strong>: GPU cloud for AI and simulation workloads</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="pricing-models">Pricing Models<a href="#pricing-models" class="hash-link" aria-label="Direct link to Pricing Models" title="Direct link to Pricing Models" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Hourly Billing</strong>: Pay per hour of usage</li>
+<li class=""><strong>Monthly Billing</strong>: Discounts for monthly commitments</li>
+<li class=""><strong>Per-Use</strong>: Pay based on actual resource consumption</li>
+<li class=""><strong>Bundled Services</strong>: Packages combining multiple services</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="robotics-specific-considerations">Robotics-Specific Considerations<a href="#robotics-specific-considerations" class="hash-link" aria-label="Direct link to Robotics-Specific Considerations" title="Direct link to Robotics-Specific Considerations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="simulation-workloads">Simulation Workloads<a href="#simulation-workloads" class="hash-link" aria-label="Direct link to Simulation Workloads" title="Direct link to Simulation Workloads" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="physics-simulation-requirements">Physics Simulation Requirements<a href="#physics-simulation-requirements" class="hash-link" aria-label="Direct link to Physics Simulation Requirements" title="Direct link to Physics Simulation Requirements" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Parallel Processing</strong>: Multi-core CPU requirements</li>
+<li class=""><strong>GPU Acceleration</strong>: CUDA/OpenCL support for physics</li>
+<li class=""><strong>Memory Requirements</strong>: Large memory for complex scenes</li>
+<li class=""><strong>Storage Needs</strong>: Fast storage for simulation assets</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="multi-instance-simulation">Multi-Instance Simulation<a href="#multi-instance-simulation" class="hash-link" aria-label="Direct link to Multi-Instance Simulation" title="Direct link to Multi-Instance Simulation" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Environment Diversity</strong>: Multiple simulation environments</li>
+<li class=""><strong>Parallel Training</strong>: Training multiple agents simultaneously</li>
+<li class=""><strong>Data Generation</strong>: Large-scale synthetic data creation</li>
+<li class=""><strong>Performance Scaling</strong>: Linear scaling with instance count</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ai-training-workloads">AI Training Workloads<a href="#ai-training-workloads" class="hash-link" aria-label="Direct link to AI Training Workloads" title="Direct link to AI Training Workloads" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="deep-learning-requirements">Deep Learning Requirements<a href="#deep-learning-requirements" class="hash-link" aria-label="Direct link to Deep Learning Requirements" title="Direct link to Deep Learning Requirements" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>GPU Memory</strong>: Large GPU memory for model training</li>
+<li class=""><strong>High Bandwidth</strong>: Fast interconnect for distributed training</li>
+<li class=""><strong>Storage Performance</strong>: Fast storage for data loading</li>
+<li class=""><strong>Network Performance</strong>: High network bandwidth for data transfer</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="training-optimization">Training Optimization<a href="#training-optimization" class="hash-link" aria-label="Direct link to Training Optimization" title="Direct link to Training Optimization" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Mixed Precision</strong>: Using FP16 for faster training</li>
+<li class=""><strong>Distributed Training</strong>: Multi-GPU and multi-node training</li>
+<li class=""><strong>Model Parallelism</strong>: Splitting models across multiple GPUs</li>
+<li class=""><strong>Data Parallelism</strong>: Parallelizing across multiple data batches</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="cost-management-strategies">Cost Management Strategies<a href="#cost-management-strategies" class="hash-link" aria-label="Direct link to Cost Management Strategies" title="Direct link to Cost Management Strategies" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="budget-planning">Budget Planning<a href="#budget-planning" class="hash-link" aria-label="Direct link to Budget Planning" title="Direct link to Budget Planning" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="estimation-techniques">Estimation Techniques<a href="#estimation-techniques" class="hash-link" aria-label="Direct link to Estimation Techniques" title="Direct link to Estimation Techniques" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Resource Profiling</strong>: Understanding resource requirements</li>
+<li class=""><strong>Usage Patterns</strong>: Analyzing peak and average usage</li>
+<li class=""><strong>Cost Modeling</strong>: Creating cost models for different scenarios</li>
+<li class=""><strong>Sensitivity Analysis</strong>: Understanding cost sensitivity to parameters</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="monitoring-and-control">Monitoring and Control<a href="#monitoring-and-control" class="hash-link" aria-label="Direct link to Monitoring and Control" title="Direct link to Monitoring and Control" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Cost Tracking</strong>: Real-time cost monitoring</li>
+<li class=""><strong>Budget Alerts</strong>: Automated alerts for cost thresholds</li>
+<li class=""><strong>Resource Tagging</strong>: Tracking costs by project or team</li>
+<li class=""><strong>Usage Reports</strong>: Regular cost analysis and reporting</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="optimization-techniques">Optimization Techniques<a href="#optimization-techniques" class="hash-link" aria-label="Direct link to Optimization Techniques" title="Direct link to Optimization Techniques" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="resource-optimization">Resource Optimization<a href="#resource-optimization" class="hash-link" aria-label="Direct link to Resource Optimization" title="Direct link to Resource Optimization" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Right-Sizing</strong>: Choosing appropriately sized instances</li>
+<li class=""><strong>Resource Scheduling</strong>: Starting/stopping resources based on schedule</li>
+<li class=""><strong>Load Balancing</strong>: Distributing workloads efficiently</li>
+<li class=""><strong>Caching</strong>: Using caching to reduce computation needs</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="architecture-optimization">Architecture Optimization<a href="#architecture-optimization" class="hash-link" aria-label="Direct link to Architecture Optimization" title="Direct link to Architecture Optimization" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Containerization</strong>: Using containers for better resource utilization</li>
+<li class=""><strong>Microservices</strong>: Breaking applications into smaller services</li>
+<li class=""><strong>Serverless Computing</strong>: Using serverless for event-driven tasks</li>
+<li class=""><strong>Edge-Cloud Hybrid</strong>: Combining edge and cloud computing</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="security-and-compliance">Security and Compliance<a href="#security-and-compliance" class="hash-link" aria-label="Direct link to Security and Compliance" title="Direct link to Security and Compliance" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="data-security">Data Security<a href="#data-security" class="hash-link" aria-label="Direct link to Data Security" title="Direct link to Data Security" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="data-protection">Data Protection<a href="#data-protection" class="hash-link" aria-label="Direct link to Data Protection" title="Direct link to Data Protection" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Encryption</strong>: Encrypting data in transit and at rest</li>
+<li class=""><strong>Access Control</strong>: Controlling access to cloud resources</li>
+<li class=""><strong>Network Security</strong>: Securing network communications</li>
+<li class=""><strong>Compliance</strong>: Meeting regulatory requirements</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="privacy-considerations">Privacy Considerations<a href="#privacy-considerations" class="hash-link" aria-label="Direct link to Privacy Considerations" title="Direct link to Privacy Considerations" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Data Residency</strong>: Ensuring data is stored in appropriate locations</li>
+<li class=""><strong>Audit Trails</strong>: Maintaining logs of data access and usage</li>
+<li class=""><strong>Anonymization</strong>: Protecting privacy in datasets</li>
+<li class=""><strong>Consent Management</strong>: Managing user consent for data use</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="system-security">System Security<a href="#system-security" class="hash-link" aria-label="Direct link to System Security" title="Direct link to System Security" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="infrastructure-security">Infrastructure Security<a href="#infrastructure-security" class="hash-link" aria-label="Direct link to Infrastructure Security" title="Direct link to Infrastructure Security" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Identity Management</strong>: Managing user identities and permissions</li>
+<li class=""><strong>Network Security</strong>: Securing cloud networks</li>
+<li class=""><strong>Vulnerability Management</strong>: Managing security vulnerabilities</li>
+<li class=""><strong>Incident Response</strong>: Responding to security incidents</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="application-security">Application Security<a href="#application-security" class="hash-link" aria-label="Direct link to Application Security" title="Direct link to Application Security" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Secure Development</strong>: Following secure development practices</li>
+<li class=""><strong>Runtime Security</strong>: Protecting applications during execution</li>
+<li class=""><strong>API Security</strong>: Securing application programming interfaces</li>
+<li class=""><strong>Container Security</strong>: Securing containerized applications</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="performance-considerations">Performance Considerations<a href="#performance-considerations" class="hash-link" aria-label="Direct link to Performance Considerations" title="Direct link to Performance Considerations" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="network-latency">Network Latency<a href="#network-latency" class="hash-link" aria-label="Direct link to Network Latency" title="Direct link to Network Latency" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="real-time-requirements">Real-time Requirements<a href="#real-time-requirements" class="hash-link" aria-label="Direct link to Real-time Requirements" title="Direct link to Real-time Requirements" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Low Latency</strong>: Minimizing network latency for real-time control</li>
+<li class=""><strong>Geographic Location</strong>: Choosing regions close to users</li>
+<li class=""><strong>Content Delivery</strong>: Using CDN for static content</li>
+<li class=""><strong>Edge Computing</strong>: Using edge locations for low-latency needs</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="data-transfer">Data Transfer<a href="#data-transfer" class="hash-link" aria-label="Direct link to Data Transfer" title="Direct link to Data Transfer" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Bandwidth</strong>: Ensuring sufficient network bandwidth</li>
+<li class=""><strong>Compression</strong>: Compressing data to reduce transfer time</li>
+<li class=""><strong>Caching</strong>: Caching frequently accessed data</li>
+<li class=""><strong>Optimization</strong>: Optimizing data transfer protocols</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="scalability-planning">Scalability Planning<a href="#scalability-planning" class="hash-link" aria-label="Direct link to Scalability Planning" title="Direct link to Scalability Planning" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="horizontal-scaling">Horizontal Scaling<a href="#horizontal-scaling" class="hash-link" aria-label="Direct link to Horizontal Scaling" title="Direct link to Horizontal Scaling" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Load Distribution</strong>: Distributing load across multiple instances</li>
+<li class=""><strong>State Management</strong>: Managing state in distributed systems</li>
+<li class=""><strong>Synchronization</strong>: Coordinating between distributed components</li>
+<li class=""><strong>Fault Tolerance</strong>: Handling failures gracefully</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="vertical-scaling">Vertical Scaling<a href="#vertical-scaling" class="hash-link" aria-label="Direct link to Vertical Scaling" title="Direct link to Vertical Scaling" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Resource Upgrading</strong>: Upgrading individual instance resources</li>
+<li class=""><strong>Performance Monitoring</strong>: Monitoring performance metrics</li>
+<li class=""><strong>Capacity Planning</strong>: Planning for future capacity needs</li>
+<li class=""><strong>Cost-Benefit Analysis</strong>: Balancing performance and cost</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="integration-with-robotics-frameworks">Integration with Robotics Frameworks<a href="#integration-with-robotics-frameworks" class="hash-link" aria-label="Direct link to Integration with Robotics Frameworks" title="Direct link to Integration with Robotics Frameworks" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="rosros2-integration">ROS/ROS2 Integration<a href="#rosros2-integration" class="hash-link" aria-label="Direct link to ROS/ROS2 Integration" title="Direct link to ROS/ROS2 Integration" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="cloud-based-ros">Cloud-Based ROS<a href="#cloud-based-ros" class="hash-link" aria-label="Direct link to Cloud-Based ROS" title="Direct link to Cloud-Based ROS" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>ROS Bridge</strong>: Connecting cloud and local ROS systems</li>
+<li class=""><strong>Message Transport</strong>: Efficient message transport over networks</li>
+<li class=""><strong>Resource Management</strong>: Managing cloud resources from ROS</li>
+<li class=""><strong>Simulation Integration</strong>: Cloud simulation with ROS</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="container-orchestration">Container Orchestration<a href="#container-orchestration" class="hash-link" aria-label="Direct link to Container Orchestration" title="Direct link to Container Orchestration" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Docker Integration</strong>: Containerizing ROS applications</li>
+<li class=""><strong>Kubernetes</strong>: Orchestrating ROS applications in the cloud</li>
+<li class=""><strong>Service Discovery</strong>: Managing service discovery in cloud</li>
+<li class=""><strong>Load Balancing</strong>: Distributing ROS workloads</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="simulation-framework-integration">Simulation Framework Integration<a href="#simulation-framework-integration" class="hash-link" aria-label="Direct link to Simulation Framework Integration" title="Direct link to Simulation Framework Integration" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="isaac-sim-in-the-cloud">Isaac Sim in the Cloud<a href="#isaac-sim-in-the-cloud" class="hash-link" aria-label="Direct link to Isaac Sim in the Cloud" title="Direct link to Isaac Sim in the Cloud" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>GPU Acceleration</strong>: Leveraging cloud GPUs for Isaac Sim</li>
+<li class=""><strong>Multi-Instance Simulation</strong>: Running multiple simulation instances</li>
+<li class=""><strong>Data Generation</strong>: Large-scale synthetic data generation</li>
+<li class=""><strong>Training Pipelines</strong>: Cloud-based RL training pipelines</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="other-simulation-platforms">Other Simulation Platforms<a href="#other-simulation-platforms" class="hash-link" aria-label="Direct link to Other Simulation Platforms" title="Direct link to Other Simulation Platforms" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Gazebo Cloud</strong>: Running Gazebo in cloud environments</li>
+<li class=""><strong>Unity Robotics</strong>: Cloud deployment of Unity simulations</li>
+<li class=""><strong>Webots Cloud</strong>: Cloud-based Webots simulations</li>
+<li class=""><strong>Custom Simulators</strong>: Deploying custom simulators in cloud</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="future-trends">Future Trends<a href="#future-trends" class="hash-link" aria-label="Direct link to Future Trends" title="Direct link to Future Trends" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="emerging-technologies">Emerging Technologies<a href="#emerging-technologies" class="hash-link" aria-label="Direct link to Emerging Technologies" title="Direct link to Emerging Technologies" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="quantum-computing-integration">Quantum Computing Integration<a href="#quantum-computing-integration" class="hash-link" aria-label="Direct link to Quantum Computing Integration" title="Direct link to Quantum Computing Integration" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Quantum Cloud Services</strong>: Early quantum computing services</li>
+<li class=""><strong>Hybrid Algorithms</strong>: Combining classical and quantum computing</li>
+<li class=""><strong>Optimization</strong>: Quantum algorithms for optimization</li>
+<li class=""><strong>Simulation</strong>: Quantum simulation for robotics</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="edge-cloud-integration">Edge-Cloud Integration<a href="#edge-cloud-integration" class="hash-link" aria-label="Direct link to Edge-Cloud Integration" title="Direct link to Edge-Cloud Integration" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Fog Computing</strong>: Distributed computing between edge and cloud</li>
+<li class=""><strong>Hybrid Architectures</strong>: Combining edge and cloud computing</li>
+<li class=""><strong>Dynamic Offloading</strong>: Intelligent workload distribution</li>
+<li class=""><strong>Real-time Processing</strong>: Balancing latency and capability</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cost-evolution">Cost Evolution<a href="#cost-evolution" class="hash-link" aria-label="Direct link to Cost Evolution" title="Direct link to Cost Evolution" translate="no">​</a></h3>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="price-trends">Price Trends<a href="#price-trends" class="hash-link" aria-label="Direct link to Price Trends" title="Direct link to Price Trends" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Hardware Costs</strong>: Decreasing cost of GPU hardware</li>
+<li class=""><strong>Competition</strong>: Price competition among providers</li>
+<li class=""><strong>Efficiency Improvements</strong>: More efficient hardware utilization</li>
+<li class=""><strong>Economies of Scale</strong>: Cost reductions from scale</li>
+</ul>
+<h4 class="anchor anchorTargetStickyNavbar_Vzrq" id="new-pricing-models">New Pricing Models<a href="#new-pricing-models" class="hash-link" aria-label="Direct link to New Pricing Models" title="Direct link to New Pricing Models" translate="no">​</a></h4>
+<ul>
+<li class=""><strong>Usage-Based</strong>: More granular usage-based pricing</li>
+<li class=""><strong>Performance-Based</strong>: Pricing based on performance achieved</li>
+<li class=""><strong>Outcome-Based</strong>: Pricing based on business outcomes</li>
+<li class=""><strong>Subscription Models</strong>: Monthly or annual subscription options</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="learning-objectives">Learning Objectives<a href="#learning-objectives" class="hash-link" aria-label="Direct link to Learning Objectives" title="Direct link to Learning Objectives" translate="no">​</a></h2>
+<p>After completing this chapter, readers should be able to:</p>
+<ul>
+<li class="">Understand the applications of cloud computing in robotics</li>
+<li class="">Compare different cloud computing options for robotics workloads</li>
+<li class="">Analyze cost considerations for cloud robotics applications</li>
+<li class="">Recognize security and performance considerations in cloud robotics</li>
+<li class="">Evaluate cloud integration with robotics frameworks and tools</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapter-17-cloud-compute-options/index.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/Physical-AI-Book/docs/chapter-16-robot-lab-options/"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Chapter 16: Robot Lab Options (Unitree Go2/G1/H1 comparison)</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/Physical-AI-Book/docs/appendices/architecture-diagrams/"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Appendix: Architecture Diagrams</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#overview" class="table-of-contents__link toc-highlight">Overview</a></li><li><a href="#cloud-computing-in-robotics" class="table-of-contents__link toc-highlight">Cloud Computing in Robotics</a><ul><li><a href="#applications-in-robotics" class="table-of-contents__link toc-highlight">Applications in Robotics</a></li><li><a href="#benefits-of-cloud-computing" class="table-of-contents__link toc-highlight">Benefits of Cloud Computing</a></li></ul></li><li><a href="#aws-cloud-computing-options" class="table-of-contents__link toc-highlight">AWS Cloud Computing Options</a><ul><li><a href="#gpu-instances-overview" class="table-of-contents__link toc-highlight">GPU Instances Overview</a></li><li><a href="#instance-specifications" class="table-of-contents__link toc-highlight">Instance Specifications</a></li><li><a href="#cost-analysis" class="table-of-contents__link toc-highlight">Cost Analysis</a></li></ul></li><li><a href="#alternative-cloud-providers" class="table-of-contents__link toc-highlight">Alternative Cloud Providers</a><ul><li><a href="#google-cloud-platform-gcp" class="table-of-contents__link toc-highlight">Google Cloud Platform (GCP)</a></li><li><a href="#microsoft-azure" class="table-of-contents__link toc-highlight">Microsoft Azure</a></li><li><a href="#other-cloud-options" class="table-of-contents__link toc-highlight">Other Cloud Options</a></li></ul></li><li><a href="#robotics-specific-considerations" class="table-of-contents__link toc-highlight">Robotics-Specific Considerations</a><ul><li><a href="#simulation-workloads" class="table-of-contents__link toc-highlight">Simulation Workloads</a></li><li><a href="#ai-training-workloads" class="table-of-contents__link toc-highlight">AI Training Workloads</a></li></ul></li><li><a href="#cost-management-strategies" class="table-of-contents__link toc-highlight">Cost Management Strategies</a><ul><li><a href="#budget-planning" class="table-of-contents__link toc-highlight">Budget Planning</a></li><li><a href="#optimization-techniques" class="table-of-contents__link toc-highlight">Optimization Techniques</a></li></ul></li><li><a href="#security-and-compliance" class="table-of-contents__link toc-highlight">Security and Compliance</a><ul><li><a href="#data-security" class="table-of-contents__link toc-highlight">Data Security</a></li><li><a href="#system-security" class="table-of-contents__link toc-highlight">System Security</a></li></ul></li><li><a href="#performance-considerations" class="table-of-contents__link toc-highlight">Performance Considerations</a><ul><li><a href="#network-latency" class="table-of-contents__link toc-highlight">Network Latency</a></li><li><a href="#scalability-planning" class="table-of-contents__link toc-highlight">Scalability Planning</a></li></ul></li><li><a href="#integration-with-robotics-frameworks" class="table-of-contents__link toc-highlight">Integration with Robotics Frameworks</a><ul><li><a href="#rosros2-integration" class="table-of-contents__link toc-highlight">ROS/ROS2 Integration</a></li><li><a href="#simulation-framework-integration" class="table-of-contents__link toc-highlight">Simulation Framework Integration</a></li></ul></li><li><a href="#future-trends" class="table-of-contents__link toc-highlight">Future Trends</a><ul><li><a href="#emerging-technologies" class="table-of-contents__link toc-highlight">Emerging Technologies</a></li><li><a href="#cost-evolution" class="table-of-contents__link toc-highlight">Cost Evolution</a></li></ul></li><li><a href="#learning-objectives" class="table-of-contents__link toc-highlight">Learning Objectives</a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Content</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/Physical-AI-Book/docs/intro">Introduction</a></li><li class="footer__item"><a class="footer__link-item" href="/Physical-AI-Book/docs/chapter-01-introduction-to-physical-ai">Part I: Foundations</a></li><li class="footer__item"><a class="footer__link-item" href="/Physical-AI-Book/docs/chapter-05-digital-twin-simulation-part1">Part II: Digital Twin &amp; Simlation</a></li><li class="footer__item"><a class="footer__link-item" href="/Physical-AI-Book/docs/chapter-07-nvidia-isaac-sim-perception">part III: NVIDIA Isaac Platform</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">Resources</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/MalaikaSaleem111/Physical-AI-Book.git" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub Repository<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://developer.nvidia.com/isaac-sim" target="_blank" rel="noopener noreferrer" class="footer__link-item">NVIDIA Isaac<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li><li class="footer__item"><a href="https://docs.ros.org/en/humble/" target="_blank" rel="noopener noreferrer" class="footer__link-item">ROS 2 Documentation<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Book. Licensed under Creative Commons Attribution 4.0 International (CC BY 4.0). Built with Docusaurus.</div></div></div></footer><div><button class="chat-bubble-btn">💬</button></div></div>
+</body>
+</html>
