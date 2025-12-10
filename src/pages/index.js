@@ -5,6 +5,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import styles from './index.module.css';
 
+
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -51,7 +53,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+         
       </main>
+     
     </Layout>
+    
   );
 }
