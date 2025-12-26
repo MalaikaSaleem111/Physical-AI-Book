@@ -13,15 +13,14 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://MalaikaSaleem111.github.io',
+  url: 'https://physical-ai-book-um21.vercel.app/', // Replace with your actual Vercel URL
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub Pages, use '/<organization-name>/<repo-name>/'
-  baseUrl: '/Physical-AI-Book/',
+  // For Vercel deployment, use '/' (root)
+  baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'MalaikaSaleem111', // Usually your GitHub org/user name.
-  projectName: 'Physical-AI-Book', // Usually your repo name.
+  // Vercel deployment configuration
+  organizationName: 'MalaikaSaleem111', // Your GitHub org/user name for the source repository
+  projectName: 'Physical-AI-Book', // Your repo name
 
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
